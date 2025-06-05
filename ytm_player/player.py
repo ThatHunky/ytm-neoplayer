@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from .models import Playlist, Track
 
 
-@dataclass
+@dataclass(slots=True)
 class Player:
     """Simple playlist-based player state."""
 

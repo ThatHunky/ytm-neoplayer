@@ -8,14 +8,14 @@ playback occurs via the official YouTube IFrame Player API.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-python -m ytm_player
+pip install -e .
+yt-music-player
 ```
 
 ## Testing
 
 ```bash
-pip install -r requirements.txt
+pip install -e .
 pip install ruff black mypy pytest
 ruff check .
 ruff format --check .

@@ -1,0 +1,22 @@
+[project]
+name = "ytm-neoplayer"
+version = "0.1.0"
+description = "Minimal YouTube Music desktop player"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyside6==6.7.0",
+    "pywebview==5.0",
+    "google-api-python-client==2.123.0",
+    "python-dotenv==1.0.1",
+    "requests==2.32.3",
+    "rapidfuzz==3.9.0",
+]
+
+[project.scripts]
+yt-music-player = "ytm_player.__main__:main"
+
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
