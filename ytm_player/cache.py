@@ -7,6 +7,7 @@ from typing import Any
 
 
 class LRU:
+    __slots__ = ("size", "_data")
     """Simple least-recently-used cache."""
 
     def __init__(self, size: int) -> None:

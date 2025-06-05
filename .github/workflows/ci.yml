@@ -21,17 +21,22 @@ jobs:
         with:
           python-version: '3.12'
       - name: Setup Virtual Environment
-        run: uv venv
+        run: python -m venv venv
       - name: Install deps
         run: |
-          uv pip install -r requirements.txt
+          source venv/bin/activate
+          pip install -r requirements.txt
       - name: Lint & Format
         run: |
+          source venv/bin/activate
           ruff check .
           ruff format --check .
       - name: Tests
-        run: pytest -q
+        run: |
+          source venv/bin/activate
+          pytest -q
       - name: Generate SBOM & Sign artefacts
         run: |
+          source venv/bin/activate
           cyclonedx-py -o sbom.xml
           cosign attest --yes --output-signature sbom.sig sbom.xml

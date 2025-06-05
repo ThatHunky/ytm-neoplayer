@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 from typing import List
 
 
-@dataclass
+@dataclass(slots=True)
 class Track:
     """A playable track."""
 
@@ -14,7 +14,7 @@ class Track:
     title: str
 
 
-@dataclass
+@dataclass(slots=True)
 class Playlist:
     """Queue of tracks."""
 
