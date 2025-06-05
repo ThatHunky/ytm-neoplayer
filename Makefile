@@ -1,13 +1,13 @@
 .PHONY: test lint format installer
 
 test:
-pytest -q
+	pytest -q
 
 lint:
-ruff check .
+	ruff check .
 
 format:
-ruff format --check .
+	ruff format --check .
 
 installer:
-scripts/build_installer.sh
+	scripts/build_installer.sh
