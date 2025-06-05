@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>YT Player</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="bridge.js"></script>
+</head>
+<body>
+    <div id="player"></div>
+    <script>
+        function onYouTubeIframeAPIReady() {
+            new YT.Player('player', {height: '390', width: '640'});
+        }
+    </script>
+</body>
+</html>
