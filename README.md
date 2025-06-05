@@ -25,3 +25,9 @@ pytest -q
 ## Installer Builds
 
 Tagged releases trigger a GitHub Actions workflow that bundles the application with PyInstaller. Pre-built binaries for Windows, macOS and Linux can be downloaded from the workflow run artifacts.
+
+To build a local installer run:
+
+```bash
+make installer
+```

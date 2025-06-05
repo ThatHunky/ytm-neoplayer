@@ -3,12 +3,8 @@ on:
   pull_request:
   push:
     branches: [ main ]
+
 jobs:
-- name: Install deps
-  run: |
-    source venv/bin/activate
-    pip install -r requirements.txt
-    pip install ruff
   python:
     runs-on: ubuntu-latest
     permissions:
@@ -16,27 +12,26 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Setup Virtual Environment
-        run: python -m venv venv
+
       - name: Install deps
         run: |
-          source venv/bin/activate
-          pip install -r requirements.txt
+          pip install uv
+          uv pip install -r requirements.txt
+
       - name: Lint & Format
         run: |
-          source venv/bin/activate
           ruff check .
           ruff format --check .
+
       - name: Tests
-        run: |
-          source venv/bin/activate
-          pytest -q
+        run: pytest -q
+
       - name: Generate SBOM & Sign artefacts
         run: |
-          source venv/bin/activate
           cyclonedx-py -o sbom.xml
           cosign attest --yes --output-signature sbom.sig sbom.xml
