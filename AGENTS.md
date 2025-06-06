@@ -1,6 +1,6 @@
 # AGENTS.md
 
-## 🧠 Universal Agent Interaction Guide (2025‑06‑06 edition)
+## 🧠 Universal Agent Interaction Guide (2025-06-07 edition)
 
 This file codifies **repository‑wide rules** for *all* automated contributors or Large Language Models (LLMs) (e.g. OpenAI Codex, GitHub Copilot, internal chat‑ops agents).
 Rules are **rank‑ordered by priority**: if a more specific document (`CONTRIBUTING.md`, inline directive, issue comment, etc.) contradicts this guide, follow that local rule **and** update this file in the same pull‑request.
