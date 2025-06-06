@@ -21,8 +21,8 @@ jobs:
       - name: Install build deps
         run: |
           pip install uv
-          uv pip install -r requirements.txt
-          uv pip install pyinstaller cyclonedx-py cosign
+          uv pip install --system -r requirements.txt
+          uv pip install --system pyinstaller cyclonedx-py cosign
       - name: Build binary
         run: |
           pyinstaller --onefile --name ytm-neoplayer ytm_player/__main__.py

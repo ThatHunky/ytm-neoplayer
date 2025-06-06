@@ -1,6 +1,6 @@
 # AGENTS.md
 
-## 🧠 Universal Agent Interaction Guide (2025‑06 edition)
+## 🧠 Universal Agent Interaction Guide (2025‑06‑06 edition)
 
 This file codifies **repository‑wide rules** for *all* automated contributors or Large Language Models (LLMs) (e.g. OpenAI Codex, GitHub Copilot, internal chat‑ops agents).
 Rules are **rank‑ordered by priority**: if a more specific document (`CONTRIBUTING.md`, inline directive, issue comment, etc.) contradicts this guide, follow that local rule **and** update this file in the same pull‑request.
@@ -194,6 +194,14 @@ To ensure smooth collaboration for Ukrainian‑speaking contributors:
 5. **Translating Docs**  — if adding a major doc in one language, provide a sibling file with `*.uk.md` / `*.en.md` suffix when practical.
 6. **Locale‑aware Tests**  — when string‑matching, use stable IDs/keys instead of full Ukrainian phrases to prevent fragile tests.
 
+
+### 13  Versioning & Self-Improvement
+
+1. **Semantic Versioning** — bump `pyproject.toml`'s `version` with each change and document bullet points in `CHANGELOG.md` under `## X.Y.Z - YYYY-MM-DD`.
+2. **Chronology** — always append new changelog sections to the top of the file.
+3. **CI reliability** — call `uv pip` with `--system` when not using `uv venv` to avoid environment errors.
+4. **PR logs** — summarise changed files and reasons in every pull request description.
+5. **Guide evolution** — agents may extend this file to refine repository rules. Update the edition date in the heading and log the changes in `CHANGELOG.md`.
 ---
 
 © 2025 Vsevolod Dobrovolskyi • License: identical to repository’s primary `LICENSE`.
