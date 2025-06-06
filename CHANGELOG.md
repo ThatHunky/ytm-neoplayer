@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 - 2025-06-06
+
+- Added self-improvement instructions and versioning rules to AGENTS.md.
+- Fixed build workflow by using `uv pip --system` and installing `ruff` in CI.
+
+
 
 ## 1.0.0 - 2025-06-06
 
