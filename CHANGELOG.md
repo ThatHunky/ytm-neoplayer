@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4 - 2025-06-07
+
+- Install cosign via official GitHub Action for reliable SBOM signing.
+
 ## 1.0.3 - 2025-06-07
 
 - Install `cyclonedx-py` and `cosign` in CI workflow for SBOM generation.
