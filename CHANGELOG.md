@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 - 2025-06-07
+
+- Install `pytest` in CI workflow to enable tests.
+
 ## 1.0.1 - 2025-06-06
 
 - Added self-improvement instructions and versioning rules to AGENTS.md.
