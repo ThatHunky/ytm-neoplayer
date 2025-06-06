@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3 - 2025-06-07
+
+- Install `cyclonedx-py` and `cosign` in CI workflow for SBOM generation.
+
 ## 1.0.2 - 2025-06-07
 
 - Install `pytest` in CI workflow to enable tests.
