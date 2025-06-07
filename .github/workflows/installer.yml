@@ -22,7 +22,10 @@ jobs:
         run: |
           pip install uv
           uv pip install --system -r requirements.txt
-          uv pip install --system pyinstaller cyclonedx-py cosign
+          uv pip install --system pyinstaller cyclonedx-bom
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
       - name: Build binary
         run: |
           pyinstaller --onefile --name ytm-neoplayer ytm_player/__main__.py
@@ -33,5 +36,5 @@ jobs:
           path: dist/ytm-neoplayer*
       - name: Generate SBOM & Sign artefacts
         run: |
-          cyclonedx-py -o sbom.xml
-          cosign attest --yes --output-signature sbom.sig sbom.xml
+          cyclonedx-py env -o sbom.xml
+          cosign sign-blob --yes --output-signature sbom.sig sbom.xml

@@ -1,6 +1,6 @@
 # AGENTS.md
 
-## 🧠 Universal Agent Interaction Guide (2025-06-07 edition)
+## 🧠 Universal Agent Interaction Guide (2025-06-09 edition)
 
 This file codifies **repository‑wide rules** for *all* automated contributors or Large Language Models (LLMs) (e.g. OpenAI Codex, GitHub Copilot, internal chat‑ops agents).
 Rules are **rank‑ordered by priority**: if a more specific document (`CONTRIBUTING.md`, inline directive, issue comment, etc.) contradicts this guide, follow that local rule **and** update this file in the same pull‑request.
@@ -142,8 +142,8 @@ jobs:
 
       - name: Generate SBOM & Sign artefacts
         run: |
-          cyclonedx-py -o sbom.xml
-          cosign attest --yes --output-signature sbom.sig sbom.xml
+          cyclonedx-py env -o sbom.xml
+          cosign sign-blob --yes --output-signature sbom.sig sbom.xml
 ```
 
 *Replicate additional jobs per language using the matrix strategy.*
