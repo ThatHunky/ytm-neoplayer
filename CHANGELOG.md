@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.10 - 2025-06-07
+
+- Fix Windows NSIS installer path to the built executable.
+
 ## 1.0.9 - 2025-06-07
 
 - Add GUI installers for macOS (DMG) and Linux (makeself).
