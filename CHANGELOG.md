@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.5 - 2025-06-07
+
+- Fix SBOM generation command in workflows and documentation.
+- Update AGENTS guide edition date.
+
 ## 1.0.4 - 2025-06-07
 
 - Install `cyclonedx-bom` in workflows to ensure SBOM generation succeeds.
