@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.7 - 2025-06-09
+
+- Fix PyInstaller entrypoint to allow running packaged binary.
+
 ## 1.0.6 - 2025-06-08
 
 - Use `cosign sign-blob` to sign SBOM and update docs.
