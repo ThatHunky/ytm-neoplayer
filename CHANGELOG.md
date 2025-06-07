@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4 - 2025-06-07
+
+- Install `cyclonedx-bom` in workflows to ensure SBOM generation succeeds.
+
 ## 1.0.3 - 2025-06-07
 
 - Install `pytest` in CI so tests run properly.
