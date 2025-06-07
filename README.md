@@ -31,3 +31,7 @@ To build a local installer run:
 ```bash
 make installer
 ```
+
+If `makensis` is available on your system, this will also produce a Windows GUI
+installer using NSIS. On macOS a `.dmg` will be created and on Linux a
+self-extracting `.run` installer is produced when `makeself` is installed.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.9 - 2025-06-07
+
+- Add GUI installers for macOS (DMG) and Linux (makeself).
+
+## 1.0.8 - 2025-06-07
+
+- Add NSIS script to build a Windows GUI installer.
+
 ## 1.0.7 - 2025-06-09
 
 - Fix PyInstaller entrypoint to allow running packaged binary.
