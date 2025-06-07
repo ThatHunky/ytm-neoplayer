@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3 - 2025-06-07
+
+- Install `pytest` in CI so tests run properly.
+
 ## 1.0.2 - 2025-06-07
 
 - Fix release workflow by installing `cosign` via dedicated action.
