@@ -1,6 +1,6 @@
 [project]
 name = "ytm-neoplayer"
-version = "1.0.5"
+version = "1.0.6"
 description = "Minimal YouTube Music desktop player"
 readme = "README.md"
 requires-python = ">=3.12"

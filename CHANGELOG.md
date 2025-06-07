@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.6 - 2025-06-08
+
+- Use `cosign sign-blob` to sign SBOM and update docs.
+- Bump guide edition date.
+
 ## 1.0.5 - 2025-06-07
 
 - Fix SBOM generation command in workflows and documentation.
