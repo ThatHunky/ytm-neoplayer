@@ -23,17 +23,27 @@ jobs:
           pip install uv
           uv pip install --system -r requirements.txt
           uv pip install --system pyinstaller cyclonedx-bom
+      - name: Install NSIS
+        if: runner.os == 'Windows'
+        run: choco install nsis -y
 
       - name: Install cosign
         uses: sigstore/cosign-installer@v3
-      - name: Build binary
-        run: |
-          pyinstaller --onefile --name ytm-neoplayer ytm_player/__main__.py
+      - name: Install makeself
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y makeself zenity
+
+      - name: Build installers
+        run: bash scripts/build_installer.sh
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ytm-neoplayer-${{ matrix.os }}
-          path: dist/ytm-neoplayer*
+          path: |
+            dist/ytm-neoplayer*
+            ytm-neoplayer-installer.exe
+            ytm-neoplayer.dmg
+            ytm-neoplayer-installer.run
       - name: Generate SBOM & Sign artefacts
         run: |
           cyclonedx-py env -o sbom.xml
