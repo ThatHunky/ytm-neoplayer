@@ -22,7 +22,10 @@ jobs:
         run: |
           pip install uv
           uv pip install --system -r requirements.txt
-          uv pip install --system pyinstaller cyclonedx-py cosign
+          uv pip install --system pyinstaller cyclonedx-py
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
       - name: Build binary
         run: |
           pyinstaller --onefile --name ytm-neoplayer ytm_player/__main__.py
