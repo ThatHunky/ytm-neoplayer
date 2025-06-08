@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.11 - 2025-06-08
+
+- Clarify Windows installer script path for PyInstaller output.
+
 ## 1.0.10 - 2025-06-07
 
 - Fix Windows NSIS installer path to the built executable.

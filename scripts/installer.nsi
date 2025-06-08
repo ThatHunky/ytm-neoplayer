@@ -5,7 +5,7 @@ Page directory
 Page instfiles
 Section "Main" SecMain
   SetOutPath $INSTDIR
-  ; Path is relative to this script's directory, so step out one level
+  ; Step out of the scripts directory to reach the PyInstaller output
   File "..\\dist\\ytm-neoplayer.exe"
   CreateShortCut "$DESKTOP\\YT Music Player.lnk" "$INSTDIR\\ytm-neoplayer.exe"
 SectionEnd
